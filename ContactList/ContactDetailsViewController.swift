@@ -14,13 +14,13 @@ class ContactDetailsViewController: UIViewController {
     @IBOutlet weak var phoneNumberLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     
-    var contact: Contact!
+    var contact: Person!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         phoneNumberLabel.text = contact.phoneNumber
         emailLabel.text = contact.eMail
-        navigationItem.title = contact.contsctName
+        navigationItem.title = contact.contactName
         
     }
 
