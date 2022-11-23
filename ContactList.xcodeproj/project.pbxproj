@@ -14,6 +14,7 @@
 		82DBCC85292EA5A30067A45F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82DBCC83292EA5A30067A45F /* LaunchScreen.storyboard */; };
 		82DBCC8D292EA8190067A45F /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DBCC8C292EA8190067A45F /* ContactListViewController.swift */; };
 		82DBCC91292EAB430067A45F /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DBCC90292EAB430067A45F /* Contact.swift */; };
+		82DBCC93292EB9260067A45F /* ContactDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DBCC92292EB9260067A45F /* ContactDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		82DBCC86292EA5A30067A45F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82DBCC8C292EA8190067A45F /* ContactListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
 		82DBCC90292EAB430067A45F /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		82DBCC92292EB9260067A45F /* ContactDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				82DBCC78292EA5A20067A45F /* AppDelegate.swift */,
 				82DBCC7A292EA5A20067A45F /* SceneDelegate.swift */,
 				82DBCC7E292EA5A20067A45F /* Main.storyboard */,
+				82DBCC92292EB9260067A45F /* ContactDetailsViewController.swift */,
 				82DBCC8C292EA8190067A45F /* ContactListViewController.swift */,
 				82DBCC8F292EA8930067A45F /* Model */,
 				82DBCC8E292EA8800067A45F /* DataStore */,
@@ -157,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82DBCC93292EB9260067A45F /* ContactDetailsViewController.swift in Sources */,
 				82DBCC91292EAB430067A45F /* Contact.swift in Sources */,
 				82DBCC79292EA5A20067A45F /* AppDelegate.swift in Sources */,
 				82DBCC7B292EA5A20067A45F /* SceneDelegate.swift in Sources */,

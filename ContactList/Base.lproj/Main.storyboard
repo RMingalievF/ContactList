@@ -49,37 +49,62 @@
             </objects>
             <point key="canvasLocation" x="380" y="-1"/>
         </scene>
-        <!--View Controller-->
+        <!--Contact Details View Controller-->
         <scene sceneID="pc3-LV-vlH">
             <objects>
-                <viewController id="PQf-AQ-kez" sceneMemberID="viewController">
+                <viewController id="PQf-AQ-kez" customClass="ContactDetailsViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DLT-yr-Yci">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TqX-dq-gPv">
-                                <rect key="frame" x="20" y="370" width="394" height="63"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9N-3X-8hO">
-                                <rect key="frame" x="20" y="441" width="394" height="63"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JAr-Uc-FiK">
-                                <rect key="frame" x="87" y="183" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="59" translatesAutoresizingMaskIntoConstraints="NO" id="Tlo-bh-ELp">
+                                <rect key="frame" x="16" y="160" width="382" height="248"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill.checkmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JAr-Uc-FiK">
+                                        <rect key="frame" x="127" y="1.5" width="128" height="125"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="128" id="A0l-bs-DrN"/>
+                                            <constraint firstAttribute="height" constant="128" id="xbM-7J-RJo"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9nf-y9-NVL">
+                                        <rect key="frame" x="0.0" y="187" width="382" height="61"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TqX-dq-gPv">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9N-3X-8hO">
+                                                <rect key="frame" x="0.0" y="40.5" width="382" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="9nf-y9-NVL" secondAttribute="trailing" id="DYD-Av-eZw"/>
+                                    <constraint firstItem="9nf-y9-NVL" firstAttribute="leading" secondItem="Tlo-bh-ELp" secondAttribute="leading" id="f1n-sv-q3w"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BDY-BO-Vhl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Tlo-bh-ELp" firstAttribute="top" secondItem="BDY-BO-Vhl" secondAttribute="top" constant="16" id="7A9-SS-pbj"/>
+                            <constraint firstItem="Tlo-bh-ELp" firstAttribute="leading" secondItem="BDY-BO-Vhl" secondAttribute="leading" constant="16" id="aV0-IH-xNq"/>
+                            <constraint firstItem="BDY-BO-Vhl" firstAttribute="trailing" secondItem="Tlo-bh-ELp" secondAttribute="trailing" constant="16" id="etT-3c-oGj"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kXI-Wj-jff"/>
+                    <connections>
+                        <outlet property="contactPhotoImageView" destination="JAr-Uc-FiK" id="iHd-bb-9uQ"/>
+                        <outlet property="emailLabel" destination="P9N-3X-8hO" id="lzh-ke-1ka"/>
+                        <outlet property="phoneNumberLabel" destination="TqX-dq-gPv" id="gaV-QK-Zxl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lfD-an-Hn2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -107,6 +132,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="person.fill.checkmark" catalog="system" width="128" height="89"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
