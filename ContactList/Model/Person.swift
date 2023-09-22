@@ -18,12 +18,20 @@ struct Person {
 
 extension Person {
     static func getContactList() -> [Person] {
+        
         var contactList: [Person] = []
-        for _ in 1...12 {
-            let contact = Person(firstName: DataStore.shared.firstName.randomElement()!,
-                   lastName: DataStore.shared.lastName.randomElement()!,
-                   phoneNumber: DataStore.shared.phoneNumber.randomElement()!,
-                   eMail: DataStore.shared.email.randomElement()!
+        
+        let firstNames = DataStore.shared.firstName.shuffled()
+        let lastNames = DataStore.shared.lastName.shuffled()
+        let phoneNumbers = DataStore.shared.phoneNumber.shuffled()
+        let eMails = DataStore.shared.email.shuffled()
+        
+        for index in 0..<firstNames.count {
+            let contact = Person(
+                firstName: firstNames[index],
+                lastName: lastNames[index],
+                phoneNumber: phoneNumbers[index],
+                eMail: eMails[index]
                    )
             contactList.append(contact)
         }
