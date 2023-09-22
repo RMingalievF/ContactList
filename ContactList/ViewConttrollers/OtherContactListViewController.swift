@@ -9,27 +9,38 @@ import UIKit
 
 class OtherContactListViewController: UITableViewController {
     
-    private var contactList = Person.getContactList()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-
-    }
+    var contactList: [Person]!
 
     // MARK: - Table view data source
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
         contactList.count
+    
     }
 
-
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        contactList[section].contactFullName
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        2
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "otherContact", for: indexPath)
-        let contact = contactList[indexPath.row]
+        
+        let contact = contactList[indexPath.section]
         var content = cell.defaultContentConfiguration()
-        content.text = contact.contactName
+        
+        switch indexPath.row {
+        case 0:
+            content.text = contact.phoneNumber
+            content.image = UIImage(systemName: "phone")
+            
+        default:
+            content.text = contact.eMail
+            content.image = UIImage(systemName: "tray")
+        }
     
         cell.contentConfiguration = content
         return cell
@@ -38,11 +49,8 @@ class OtherContactListViewController: UITableViewController {
 
     // MARK: - Navigation
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let indexPath = tableView.indexPathForSelectedRow else { return }
-        guard let detailsVC = segue.destination as? ContactDetailsViewController else  { return }
-        detailsVC.contact = contactList[indexPath.row]
-
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
 

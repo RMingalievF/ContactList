@@ -11,7 +11,7 @@ struct Person {
     let phoneNumber: String
     let eMail: String
     
-    var contactName: String {
+    var contactFullName: String {
         "\(firstName) \(lastName)"
     }
 }

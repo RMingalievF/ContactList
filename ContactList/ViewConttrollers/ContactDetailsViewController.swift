@@ -20,7 +20,7 @@ class ContactDetailsViewController: UIViewController {
         super.viewDidLoad()
         phoneNumberLabel.text = contact.phoneNumber
         emailLabel.text = contact.eMail
-        navigationItem.title = contact.contactName
+        title = contact.contactFullName
         
     }
 
