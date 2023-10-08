@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zKx-t4-wZy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MUo-Yz-jGH">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Persons card-->
         <scene sceneID="vez-ME-hQd">
             <objects>
                 <tableViewController id="ZB9-fs-Rvl" customClass="OtherContactListViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,17 +32,34 @@
                             <outlet property="delegate" destination="ZB9-fs-Rvl" id="bvH-Uu-kuf"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="rm7-hD-juB"/>
+                    <tabBarItem key="tabBarItem" title="Persons card" image="person.crop.square.filled.and.at.rectangle" catalog="system" selectedImage="person.crop.square.filled.and.at.rectangle.fill" id="rm7-hD-juB"/>
                     <navigationItem key="navigationItem" id="Y0l-h7-wwi"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tgl-aD-IPs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="223" y="-998"/>
+            <point key="canvasLocation" x="-410" y="-1220"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8UA-W3-Tzg">
+            <objects>
+                <navigationController id="MUo-Yz-jGH" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vb7-Se-Wyj">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="zKx-t4-wZy" kind="relationship" relationship="rootViewController" id="NLq-r4-wXB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jM3-L3-Fha" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2235" y="-1077"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="u4L-0O-OGZ">
             <objects>
-                <tabBarController id="zKx-t4-wZy" customClass="TabBarViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController hidesBottomBarWhenPushed="YES" id="zKx-t4-wZy" customClass="TabBarViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="9it-dQ-q4c"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ks0-QW-8KA">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -55,7 +72,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o9s-d3-DTV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1606" y="-618"/>
+            <point key="canvasLocation" x="-1296" y="-1077"/>
         </scene>
         <!--Contact List-->
         <scene sceneID="oKo-81-TCT">
@@ -92,23 +109,23 @@
                             <outlet property="delegate" destination="mpu-R3-XvZ" id="WOk-fb-Yrd"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="I9k-k3-kcX"/>
+                    <tabBarItem key="tabBarItem" title="Contact list" image="person.crop.circle.badge.checkmark" catalog="system" selectedImage="person.crop.circle.fill.badge.checkmark" id="I9k-k3-kcX"/>
                     <navigationItem key="navigationItem" title="Contact List" id="Vc8-Wx-35P"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B4F-iy-yol" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="65" y="-279"/>
+            <point key="canvasLocation" x="-410" y="-577"/>
         </scene>
         <!--Contact Details View Controller-->
         <scene sceneID="pc3-LV-vlH">
             <objects>
                 <viewController id="PQf-AQ-kez" customClass="ContactDetailsViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DLT-yr-Yci">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="59" translatesAutoresizingMaskIntoConstraints="NO" id="Tlo-bh-ELp">
-                                <rect key="frame" x="16" y="16" width="382" height="248"/>
+                                <rect key="frame" x="16" y="108" width="382" height="248"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill.checkmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JAr-Uc-FiK">
                                         <rect key="frame" x="127" y="1.5" width="128" height="125"/>
@@ -158,10 +175,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lfD-an-Hn2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1229" y="-279"/>
+            <point key="canvasLocation" x="438" y="-577"/>
         </scene>
     </scenes>
     <resources>
+        <image name="person.crop.circle.badge.checkmark" catalog="system" width="128" height="114"/>
+        <image name="person.crop.circle.fill.badge.checkmark" catalog="system" width="128" height="114"/>
+        <image name="person.crop.square.filled.and.at.rectangle" catalog="system" width="128" height="93"/>
+        <image name="person.crop.square.filled.and.at.rectangle.fill" catalog="system" width="128" height="93"/>
         <image name="person.fill.checkmark" catalog="system" width="128" height="89"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
